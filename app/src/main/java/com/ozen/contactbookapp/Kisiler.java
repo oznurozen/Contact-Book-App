@@ -7,11 +7,13 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+
 public class Kisiler extends Activity {
 
     ListView kisilerListe;
 
-    private String[] kisiIsimleri={"Ayşe","Mehmet","Ali","Zeynep","Beyza"};
+    private String[] kisiIsimleri={"Ayse","Mehmet","Ali","Zeynep","Beyza","Zuleyha","Hamza"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +21,11 @@ public class Kisiler extends Activity {
         setContentView(R.layout.kisiler);
 
        kisilerListe = findViewById(R.id.kisilerListe);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1 , android.R.id.text1, kisiIsimleri);
 
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1 , android.R.id.text1, kisiIsimleri);
+        Arrays.sort(kisiIsimleri);
+        Arrays.toString(kisiIsimleri);
         kisilerListe.setAdapter(adapter);
     }
 }
