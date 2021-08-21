@@ -44,5 +44,10 @@ public class MainActivity extends Activity {
             }
         });
 
+        sonCagrilar.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this,SonCagrilar.class);
+            startActivity(intent);
+        });
+
     }
 }
