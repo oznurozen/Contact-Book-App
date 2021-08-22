@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ozen.contactbookapp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -24,6 +25,8 @@
         <activity android:name=".Kisiler"/>
         <activity android:name=".Arama"/>
         <activity android:name=".SonCagrilar"/>
+        <activity android:name=".Ayse"
+            tools:ignore="MissingClass" />
     </application>
 
 </manifest>

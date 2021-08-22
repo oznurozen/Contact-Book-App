@@ -24,9 +24,10 @@
         android:layout_marginLeft="50dp"
         android:background="@drawable/butonbackground"
         android:text="1"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
+
         />
 
     <Button
@@ -37,7 +38,7 @@
         android:layout_marginLeft="150dp"
         android:background="@drawable/butonbackground"
         android:text="2"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
         />
@@ -50,7 +51,7 @@
         android:layout_marginLeft="250dp"
         android:background="@drawable/butonbackground"
         android:text="3"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"/>
 
@@ -58,14 +59,13 @@
         android:id="@+id/dort"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_marginTop="250dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/butonbackground"
         android:text="4"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
-        app:backgroundTint="#147870"
-        />
+        app:backgroundTint="#147870" />
 
     <Button
         android:id="@+id/bes"
@@ -75,7 +75,7 @@
         android:layout_marginLeft="150dp"
         android:background="@drawable/butonbackground"
         android:text="5"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
         />
@@ -88,7 +88,7 @@
         android:layout_marginLeft="250dp"
         android:background="@drawable/butonbackground"
         android:text="6"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
         />
@@ -103,20 +103,19 @@
         android:text="7"
         android:textColor="@color/black"
         android:textSize="40dp"
-        app:backgroundTint="@color/teal_700" />
+        app:backgroundTint="#147870" />
 
     <Button
         android:id="@+id/sekiz"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_marginTop="350dp"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="350dp"
         android:background="@drawable/butonbackground"
         android:text="8"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
-        app:backgroundTint="#147870"
-        />
+        app:backgroundTint="#147870" />
 
     <Button
         android:id="@+id/dokuz"
@@ -126,7 +125,7 @@
         android:layout_marginLeft="250dp"
         android:background="@drawable/butonbackground"
         android:text="9"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
         />
@@ -139,7 +138,7 @@
         android:layout_marginTop="450dp"
         android:background="@drawable/butonbackground"
         android:text="*"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870" />
 
@@ -151,7 +150,7 @@
         android:layout_marginLeft="150dp"
         android:background="@drawable/butonbackground"
         android:text="0"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
         />
@@ -165,7 +164,7 @@
         android:layout_marginLeft="250dp"
         android:background="@drawable/butonbackground"
         android:text="#"
-        android:textColor="@color/purple_200"
+        android:textColor="@color/black"
         android:textSize="40dp"
         app:backgroundTint="#147870"
         />
