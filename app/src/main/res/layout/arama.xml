@@ -169,12 +169,12 @@
         app:backgroundTint="#147870"
         />
 
-    <Button
+    <ImageButton
         android:id="@+id/ara"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="550dp"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/telephone"
         app:backgroundTint="@drawable/telephone"
         tools:ignore="MissingConstraints"

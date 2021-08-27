@@ -1,53 +1,52 @@
 package com.ozen.contactbookapp;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-public class MainActivity extends Activity {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-    Button sonCagrilar,kisiler,arama;
+public class MainActivity extends AppCompatActivity {
+    BottomNavigationView bottomNavigationView;
+    Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tanimla();
-        islemler();
-    }
-    void tanimla(){
-        sonCagrilar= findViewById(R.id.sonCagrilar);
-        kisiler = findViewById(R.id.kisiler);
-        arama = findViewById(R.id.arama);
-    }
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new SonCagrilar()).commit();
 
-    void islemler(){
-        kisiler.setOnClickListener(new View.OnClickListener() {
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setItemIconTintList(null);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
             @Override
-            public void onClick(View v) {
-                //getApplicationContext(), Kisiler.class
-                Intent intent = new Intent(MainActivity.this,Kisiler.class);
-                startActivity(intent);
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.sonCagrilar:
+                        fragment = new SonCagrilar();
+                        break;
+                    case R.id.kisiler:
+                        fragment = new Kisiler();
+                        break;
+                    case R.id.arama:
+                        fragment = new Arama();
+                        break;
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,fragment).commit();
+                return true;
             }
         });
 
-        arama.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Arama.class);
-                startActivity(intent);
-            }
-        });
-
-        sonCagrilar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this,SonCagrilar.class);
-            startActivity(intent);
-        });
 
     }
+
+
 }

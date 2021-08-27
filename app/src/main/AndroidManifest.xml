@@ -25,8 +25,6 @@
         <activity android:name=".Kisiler"/>
         <activity android:name=".Arama"/>
         <activity android:name=".SonCagrilar"/>
-        <activity android:name=".Ayse"
-            tools:ignore="MissingClass" />
     </application>
 
 </manifest>

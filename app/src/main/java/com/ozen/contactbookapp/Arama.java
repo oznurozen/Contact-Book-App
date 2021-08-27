@@ -1,41 +1,49 @@
 package com.ozen.contactbookapp;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
-public class Arama extends Activity {
-    Button bir,iki,uc,dort,bes,alti,yedi,sekiz,dokuz,kare,sifir,yildiz,ara;
-    TextView textView;
 
-    @SuppressLint("SetTextI18n")
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.arama);
+    public class Arama extends Fragment {
+        View view;
+        Button bir,iki,uc,dort,bes,alti,yedi,sekiz,dokuz,kare,sifir,yildiz;
+        TextView textView;
+        ImageButton ara;
 
-        bir = findViewById(R.id.bir);
-        iki = findViewById(R.id.iki);
-        uc = findViewById(R.id.uc);
-        dort = findViewById(R.id.dort);
-        bes = findViewById(R.id.bes);
-        alti = findViewById(R.id.alti);
-        yedi = findViewById(R.id.yedi);
-        sekiz = findViewById(R.id.sekiz);
-        dokuz = findViewById(R.id.dokuz);
-        yildiz = findViewById(R.id.yildiz);
-        sifir = findViewById(R.id.sifir);
-        kare = findViewById(R.id.kare);
-        ara = findViewById(R.id.ara);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            view = inflater.inflate(R.layout.arama, container, false);
+            tanimlama();
+            return view;
 
-        textView = findViewById(R.id.textView);
+
+        }
+    void tanimlama(){
+        bir = view.findViewById(R.id.bir);
+        iki = view.findViewById(R.id.iki);
+        uc = view.findViewById(R.id.uc);
+        dort = view.findViewById(R.id.dort);
+        bes = view.findViewById(R.id.bes);
+        alti = view.findViewById(R.id.alti);
+        yedi = view.findViewById(R.id.yedi);
+        sekiz = view.findViewById(R.id.sekiz);
+        dokuz = view.findViewById(R.id.dokuz);
+        yildiz = view.findViewById(R.id.yildiz);
+        sifir = view.findViewById(R.id.sifir);
+        kare = view.findViewById(R.id.kare);
+        ara = view.findViewById(R.id.ara);
+
+        textView = view.findViewById(R.id.textView);
 
         bir.setOnClickListener(view -> textView.setText(textView.getText()+"1"));
         iki.setOnClickListener(view -> textView.setText(textView.getText()+"2"));
@@ -52,7 +60,7 @@ public class Arama extends Activity {
 
         ara.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse(textView.getText().toString()));
                 startActivity(intent);
